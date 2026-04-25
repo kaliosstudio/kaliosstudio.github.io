@@ -2,71 +2,119 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="google-site-verification" content="KdyCXjUdRYmmonmM7MDw8xd9jBc8isFt3wn-6LKqxYA" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalios Studio - Games and Apps Development</title>
+    <title>Kalios Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="css-bg"></div>
     <header>
-        <nav>
-            <div class="container">
-                <h1>Kalios Studio</h1>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+        <div class="container header-content">
+            <div class="logo">
+                <span class="logo-text">Kalios</span><span class="logo-accent">Studio</span>
             </div>
-        </nav>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#stats">Games & Apps</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <section id="hero">
-        <div class="container">
-            <h2>Welcome to Kalios Studio</h2>
-            <p>Crafting innovative games and apps that captivate and engage users worldwide.</p>
-            <a href="#contact" class="btn">Get in Touch</a>
+        <div class="container hero-content">
+            <div class="hero-text-box">
+                <h1 class="glow-text">Kalios Studio</h1>
+                <p>Crafting innovative games and apps that captivate and engage users worldwide.</p>
+            </div>
+            <img src="assets/mascot.png" alt="Mascot" class="floating-mascot">
+            <img src="assets/rocket.png" alt="Rocket" class="floating-rocket">
         </div>
     </section>
 
     <section id="about">
         <div class="container">
-            <h2>About Us</h2>
-            <p>At Kalios Studio, we are passionate about creating immersive digital experiences. Our team of skilled developers, designers, and creatives work together to bring your ideas to life through cutting-edge games and applications.</p>
-        </div>
-    </section>
-
-    <section id="services">
-        <div class="container">
-            <h2>Our Services</h2>
-            <div class="service">
-                <h3>Game Development</h3>
-                <p>We design and develop engaging games for various platforms, from mobile to desktop.</p>
-            </div>
-            <div class="service">
-                <h3>App Development</h3>
-                <p>Custom mobile and web applications tailored to your business needs.</p>
+            <h2 class="section-title">About Us</h2>
+            <div class="about-card">
+                <p>At Kalios Studio, we are passionate about creating immersive digital experiences. Our team of skilled developers, designers, and creatives work together to bring your ideas to life through cutting-edge games and apps.</p>
             </div>
         </div>
     </section>
 
-    <section id="contact">
+    <section id="stats">
         <div class="container">
-            <h2>Contact Us</h2>
-            <p>Ready to start your project? Reach out to us!</p>
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message"></textarea>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
+            <h2 class="section-title">Our Reach</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>1M+</h3>
+                    <p>Active Users</p>
+                </div>
+                <div class="stat-card">
+                    <h3>5M+</h3>
+                    <p>Downloads</p>
+                </div>
+                <div class="stat-card">
+                    <h3>20+</h3>
+                    <p>Games Published</p>
+                </div>
+                <div class="stat-card">
+                    <h3>5+</h3>
+                    <p>Apps Published</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
+            <div class="logo">
+                <span class="logo-text">Kalios</span><span class="logo-accent">Studio</span>
+            </div>
             <p>&copy; 2026 Kalios Studio. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const bg = document.querySelector('.css-bg');
+            
+            // Generate Twinkling Stars
+            for (let i = 0; i < 150; i++) {
+                let star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + 'vw';
+                star.style.top = Math.random() * 100 + 'vh';
+                let size = Math.random() * 2 + 1; 
+                star.style.width = size + 'px';
+                star.style.height = size + 'px';
+                star.style.animationDuration = (Math.random() * 4 + 2) + 's';
+                star.style.animationDelay = Math.random() * -5 + 's';
+                bg.appendChild(star);
+            }
+
+            // Generate Random Moving Asteroids
+            for (let i = 0; i < 12; i++) {
+                let asteroid = document.createElement('div');
+                asteroid.className = 'asteroid';
+                asteroid.style.left = Math.random() * 120 - 10 + 'vw';
+                asteroid.style.top = Math.random() * 120 - 10 + 'vh';
+                let size = Math.random() * 15 + 5; 
+                asteroid.style.width = size + 'px';
+                asteroid.style.height = size + 'px';
+                asteroid.style.animationDuration = (Math.random() * 40 + 20) + 's';
+                asteroid.style.animationDelay = Math.random() * -40 + 's';
+                
+                let moveX = (Math.random() * 200 - 100) + 'vw';
+                let moveY = (Math.random() * 200 - 100) + 'vh';
+                asteroid.style.setProperty('--move-x', moveX);
+                asteroid.style.setProperty('--move-y', moveY);
+                
+                bg.appendChild(asteroid);
+            }
+        });
+    </script>
 </body>
 </html>
