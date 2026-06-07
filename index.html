@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <title>Kalios Studio — We build games that people can't stop playing.</title>
     
     <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&display=swap" rel="stylesheet">
@@ -52,11 +53,11 @@
 <body>
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 py-6 border-b border-white/5 bg-black/90 backdrop-blur-md">
+    <nav class="fixed top-0 w-full z-50 py-6 bg-transparent">
         <div class="container-custom flex items-center justify-between">
             <a href="#" class="font-clash font-bold text-xl tracking-tighter">KALIOS STUDIO</a>
             <div class="hidden md:flex items-center gap-10">
-                <a href="#process" class="text-[10px] uppercase tracking-widest font-bold text-secondary-text hover:text-white transition-colors">Process</a>
+                <a href="#about" class="text-[10px] uppercase tracking-widest font-bold text-secondary-text hover:text-white transition-colors">About Us</a>
                 <a href="#work" class="text-[10px] uppercase tracking-widest font-bold text-secondary-text hover:text-white transition-colors">Games</a>
                 <a href="#contact" class="flex items-center gap-2 px-5 py-2.5 bg-white text-black rounded-button text-[10px] font-bold hover:scale-[1.03] transition-all">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
@@ -67,84 +68,76 @@
     </nav>
 
     <!-- Hero -->
-    <header class="relative min-h-[90vh] flex flex-col items-center justify-center pt-24 text-center overflow-hidden">
-        <!-- Starfield canvas, scoped to hero only -->
-        <canvas id="hero-stars" class="absolute inset-0 w-full h-full pointer-events-none"></canvas>
+    <header class="relative min-h-[75vh] md:min-h-[90vh] flex flex-col items-center justify-center pt-20 md:pt-24 text-center overflow-hidden bg-cover bg-center bg-no-repeat" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0.5) 75%, rgba(0, 0, 0, 1) 100%), url('assets/backgrounds/hero-v2.png'); background-size: cover; background-position: center;">
         <div class="container-custom z-10 reveal">
-            <h1 class="text-5xl md:text-8xl font-bold leading-[0.9] mb-8 max-w-5xl mx-auto">
+            <h1 class="text-3xl sm:text-5xl md:text-8xl font-bold leading-[0.9] mb-6 md:mb-8 max-w-5xl mx-auto">
                 We build games <br/> that people can't <br/> <span class="text-secondary-text">stop playing.</span>
             </h1>
-            <p class="text-sm md:text-lg text-secondary-text max-w-xl mx-auto mb-12 font-medium tracking-tight">
+            <p class="text-xs sm:text-sm md:text-lg text-secondary-text max-w-xl mx-auto mb-8 md:mb-12 font-medium tracking-tight">
                 Tested. Iterated. Scaled. We launch hyper-casual experiences built for volume, velocity, and viral growth.
             </p>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="#work" class="w-full sm:w-auto px-10 py-4 bg-white text-black rounded-button font-bold text-sm tracking-widest hover:scale-[1.03] transition-transform uppercase">View Games</a>
-                <a href="https://play.google.com/store/apps/dev?id=6751046027824906599" target="_blank" class="w-full sm:w-auto px-10 py-4 border border-border-dim text-white rounded-button font-bold text-sm tracking-widest hover:bg-white/5 transition-colors uppercase">Google Play</a>
+            <div class="flex flex-row items-center justify-center gap-3 sm:gap-4">
+                <a href="#work" class="px-6 sm:px-10 py-3 sm:py-4 bg-white text-black rounded-button font-bold text-xs sm:text-sm tracking-widest hover:scale-[1.03] transition-transform uppercase">View Games</a>
+                <a href="https://play.google.com/store/apps/dev?id=6751046027824906599" target="_blank" class="flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-10 py-3 sm:py-4 border border-border-dim text-white rounded-button font-bold text-xs sm:text-sm tracking-widest hover:bg-white/5 transition-colors uppercase">
+                    <img src="assets/icons/google-play.svg" alt="Google Play" class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0">
+                    Google Play
+                </a>
             </div>
         </div>
     </header>
 
     <!-- Stats Strip -->
-    <div class="bg-surface border-y border-border-dim py-8 relative z-10">
-        <div class="container-custom flex flex-col md:flex-row items-center justify-center gap-12 md:gap-24 opacity-80">
+    <div class="bg-surface border-y border-border-dim py-6 md:py-8 relative z-10">
+        <div class="container-custom flex flex-row items-center justify-center gap-8 md:gap-24 opacity-80">
             <div class="flex flex-col items-center">
-                <span class="data-label mb-1">Active Users</span>
-                <span class="text-3xl font-clash font-bold">150K+</span>
+                <span class="data-label mb-1">Happy Players</span>
+                <span class="text-xl md:text-3xl font-clash font-bold">100K+</span>
             </div>
-            <div class="w-px h-8 bg-border-dim hidden md:block"></div>
+            <div class="w-px h-6 md:h-8 bg-border-dim"></div>
             <div class="flex flex-col items-center">
-                <span class="data-label mb-1">Total Downloads</span>
-                <span class="text-3xl font-clash font-bold">500K+</span>
+                <span class="data-label mb-1">5-Star Reviews</span>
+                <span class="text-xl md:text-3xl font-clash font-bold">2K+</span>
             </div>
-            <div class="w-px h-8 bg-border-dim hidden md:block"></div>
+            <div class="w-px h-6 md:h-8 bg-border-dim"></div>
             <div class="flex flex-col items-center">
-                <span class="data-label mb-1">Avg Session</span>
-                <span class="text-3xl font-clash font-bold">3.8m</span>
+                <span class="data-label mb-1">Games & Apps Live</span>
+                <span class="text-xl md:text-3xl font-clash font-bold">5+</span>
             </div>
         </div>
     </div>
 
-    <!-- Process Section -->
-    <section id="process" class="section-padding bg-black relative z-10">
-        <div class="container-custom">
-            <div class="mb-16 reveal">
-                <h2 class="text-4xl md:text-6xl font-bold mb-4">Test. Kill. Scale.</h2>
-                <p class="text-secondary-text text-sm md:text-base font-medium max-w-xl uppercase tracking-widest">How we launch winners and cut the noise.</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-surface border border-border-dim p-10 rounded-card reveal">
-                    <div class="text-2xl mb-6 font-clash font-bold text-secondary-text">01</div>
-                    <h3 class="text-xl font-bold mb-4">Rapid Prototyping</h3>
-                    <p class="text-secondary-text text-sm leading-relaxed">From concept to playable build in 48 hours. We value velocity over perfection in the early stage.</p>
-                </div>
-                <div class="bg-surface border border-border-dim p-10 rounded-card reveal">
-                    <div class="text-2xl mb-6 font-clash font-bold text-secondary-text">02</div>
-                    <h3 class="text-xl font-bold mb-4">Aggressive Testing</h3>
-                    <p class="text-secondary-text text-sm leading-relaxed">Strict CPI and D1 retention benchmarks. If the data doesn't hit, we kill the project instantly.</p>
-                </div>
-                <div class="bg-surface border border-border-dim p-10 rounded-card reveal">
-                    <div class="text-2xl mb-6 font-clash font-bold text-secondary-text">03</div>
-                    <h3 class="text-xl font-bold mb-4">Global Scale</h3>
-                    <p class="text-secondary-text text-sm leading-relaxed">Once metrics are proven, we push to millions through optimized UA and monetization loops.</p>
-                </div>
-            </div>
+    <!-- About Us Section -->
+    <section id="about" class="relative min-h-[50vh] md:min-h-[70vh] flex flex-col items-center justify-center py-16 md:py-32 bg-black text-center relative z-10">
+        <div class="container-custom z-10 reveal">
+            <h2 class="text-3xl sm:text-5xl md:text-7xl font-bold leading-tight mb-5 md:mb-8 max-w-4xl mx-auto">
+                We are <br/> <span class="text-secondary-text">Indie Devs.</span>
+            </h2>
+            <p class="text-xs sm:text-sm md:text-xl text-secondary-text max-w-2xl mx-auto font-medium tracking-tight leading-relaxed">
+                We are a small, dedicated group of independent developers crafting engaging hyper-casual games and practical utility applications designed to make users' lives easier and more entertaining.
+            </p>
         </div>
     </section>
 
     <!-- Portfolio / Games Section -->
-    <section id="work" class="section-padding bg-soft-black relative z-10 border-t border-border-dim">
+    <section id="work" class="py-16 md:py-32 bg-soft-black relative z-10 border-t border-border-dim">
         <div class="container-custom">
 
             <!-- Tabs -->
-            <div class="flex items-center gap-0 mb-14 border-b border-border-dim reveal">
-                <button id="btn-games" onclick="showTab('games')"
-                    class="pb-5 pr-8 text-sm font-bold uppercase tracking-widest text-white border-b-2 border-white transition-all">
-                    Games
-                </button>
-                <button id="btn-apps" onclick="showTab('apps')"
-                    class="pb-5 px-8 text-sm font-bold uppercase tracking-widest text-muted-text border-b-2 border-transparent hover:text-secondary-text transition-all">
-                    Apps
-                </button>
+            <div class="flex items-end justify-between mb-8 md:mb-14 border-b border-border-dim reveal">
+                <div class="flex items-center gap-0">
+                    <button id="btn-games" onclick="showTab('games')"
+                        class="pb-4 md:pb-5 pr-6 md:pr-8 text-xs md:text-sm font-bold uppercase tracking-widest text-white border-b-2 border-white transition-all">
+                        Games
+                    </button>
+                    <button id="btn-apps" onclick="showTab('apps')"
+                        class="pb-4 md:pb-5 px-6 md:px-8 text-xs md:text-sm font-bold uppercase tracking-widest text-muted-text border-b-2 border-transparent hover:text-secondary-text transition-all">
+                        Apps
+                    </button>
+                </div>
+                <a href="games.html" class="pb-4 md:pb-5 flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-muted-text hover:text-white transition-colors">
+                    View All
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
             </div>
 
             <!-- Games Grid -->
@@ -168,10 +161,7 @@
                     <div class="absolute bottom-0 left-0 right-0 flex items-center justify-center p-4
                                 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out">
                         <span class="flex items-center gap-2 bg-white text-black px-4 py-2 rounded-button font-bold text-[11px] uppercase tracking-widest w-full justify-center">
-                            <!-- Google Play triangle icon -->
-                            <svg class="w-3.5 h-3.5 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M3 20.5v-17c0-.83 1-.9 1.37-.43l14 8.5c.34.2.34.69 0 .89l-14 8.5C3 21.4 3 21.33 3 20.5z"/>
-                            </svg>
+                            <img src="assets/icons/google-play.svg" alt="Google Play" class="w-3.5 h-3.5 flex-shrink-0">
                             Google Play
                         </span>
                     </div>
@@ -192,9 +182,28 @@
                     <div class="absolute bottom-0 left-0 right-0 flex items-center justify-center p-4
                                 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out">
                         <span class="flex items-center gap-2 bg-white text-black px-4 py-2 rounded-button font-bold text-[11px] uppercase tracking-widest w-full justify-center">
-                            <svg class="w-3.5 h-3.5 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M3 20.5v-17c0-.83 1-.9 1.37-.43l14 8.5c.34.2.34.69 0 .89l-14 8.5C3 21.4 3 21.33 3 20.5z"/>
-                            </svg>
+                            <img src="assets/icons/google-play.svg" alt="Google Play" class="w-3.5 h-3.5 flex-shrink-0">
+                            Google Play
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Kitty Match Card -->
+                <a href="https://play.google.com/store/apps/details?id=com.kaliosstudio.ktymtch"
+                   target="_blank"
+                   class="group relative rounded-card overflow-hidden bg-surface reveal block"
+                   style="aspect-ratio:1/1;">
+                    <img src="assets/games/kitty_match.webp" alt="Kitty Match"
+                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ease-out">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4 group-hover:translate-y-[-48px] transition-transform duration-300 ease-out">
+                        <p class="font-clash font-bold text-sm text-white leading-tight">Kitty Match</p>
+                        <p class="text-[10px] text-white/50 font-bold uppercase tracking-widest mt-0.5">Puzzle</p>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 flex items-center justify-center p-4
+                                translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out">
+                        <span class="flex items-center gap-2 bg-white text-black px-4 py-2 rounded-button font-bold text-[11px] uppercase tracking-widest w-full justify-center">
+                            <img src="assets/icons/google-play.svg" alt="Google Play" class="w-3.5 h-3.5 flex-shrink-0">
                             Google Play
                         </span>
                     </div>
@@ -204,42 +213,69 @@
 
             <!-- Apps Grid (Hidden) -->
             <div id="tab-apps" class="hidden grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                <div class="col-span-2 md:col-span-3 lg:col-span-4 py-24 text-center">
-                    <p class="data-label">Apps coming soon</p>
-                </div>
+
+                <!-- Skriblo Card -->
+                <a href="https://play.google.com/store/apps/details?id=com.kaliosstudio.skriblo"
+                   target="_blank"
+                   class="group relative rounded-card overflow-hidden bg-surface reveal block"
+                   style="aspect-ratio:1/1;">
+                    <img src="assets/apps/skriblo.webp" alt="Skriblo"
+                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ease-out">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4 group-hover:translate-y-[-48px] transition-transform duration-300 ease-out">
+                        <p class="font-clash font-bold text-sm text-white leading-tight">Skriblo</p>
+                        <p class="text-[10px] text-white/50 font-bold uppercase tracking-widest mt-0.5">Draw & Paint</p>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 flex items-center justify-center p-4
+                                translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out">
+                        <span class="flex items-center gap-2 bg-white text-black px-4 py-2 rounded-button font-bold text-[11px] uppercase tracking-widest w-full justify-center">
+                            <img src="assets/icons/google-play.svg" alt="Google Play" class="w-3.5 h-3.5 flex-shrink-0">
+                            Google Play
+                        </span>
+                    </div>
+                </a>
+
             </div>
 
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="contact" class="py-24 bg-black relative z-10 border-t border-border-dim">
+    <footer id="contact" class="py-16 md:py-24 bg-black relative z-10 border-t border-border-dim">
         <div class="container-custom">
-            <div class="grid md:grid-cols-3 gap-16 mb-20 text-center md:text-left items-start">
+            <!-- Mobile: stacked center layout / Desktop: 3 columns left-aligned -->
+            <div class="flex flex-col items-center text-center md:grid md:grid-cols-3 md:text-left md:items-start gap-12 md:gap-16 mb-16 md:mb-20">
+
+                <!-- Brand -->
                 <div class="reveal">
-                    <span class="font-clash font-bold text-2xl tracking-tighter mb-4 block">KALIOS STUDIO</span>
+                    <span class="font-clash font-bold text-2xl tracking-tighter mb-3 block">KALIOS STUDIO</span>
                     <p class="text-secondary-text text-xs uppercase tracking-widest font-bold">Launch Games Fast. Scale what works.</p>
                 </div>
-                <div class="flex flex-col gap-4 reveal">
-                    <p class="data-label mb-2">Platform</p>
-                    <a href="#process" class="text-sm font-bold hover:text-secondary-text transition-colors uppercase tracking-widest">Our Process</a>
+
+                <!-- Links -->
+                <div class="flex flex-col items-center md:items-start gap-3 reveal">
+                    <p class="data-label mb-1">Platform</p>
                     <a href="#work" class="text-sm font-bold hover:text-secondary-text transition-colors uppercase tracking-widest">Our Games</a>
-                    <a href="https://play.google.com/store/apps/dev?id=6751046027824906599" target="_blank" class="text-sm font-bold hover:text-secondary-text transition-colors uppercase tracking-widest">Google Play</a>
+                    <a href="https://play.google.com/store/apps/dev?id=6751046027824906599" target="_blank" class="inline-flex items-center justify-center md:justify-start gap-2 text-sm font-bold hover:text-secondary-text transition-colors uppercase tracking-widest">
+                        <img src="assets/icons/google-play.svg" alt="Google Play" class="w-4 h-4 flex-shrink-0">
+                        Google Play
+                    </a>
                 </div>
-                <div class="reveal">
+
+                <!-- Contact -->
+                <div class="flex flex-col items-center md:items-start reveal">
                     <p class="data-label mb-4">Get in Touch</p>
-                    <div class="flex flex-col gap-4 items-center md:items-start">
-                        <a href="mailto:kaliosstudio.dev@gmail.com" class="flex items-center gap-3 group">
-                            <div class="w-10 h-10 rounded-lg bg-surface border border-border-dim flex items-center justify-center group-hover:border-white transition-colors">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                            </div>
-                            <span class="text-sm font-bold hover:text-secondary-text transition-colors">kaliosstudio.dev@gmail.com</span>
-                        </a>
-                        <p class="text-[10px] text-muted-text font-bold uppercase tracking-widest leading-relaxed">Direct response for <br/> partnership &amp; publishing.</p>
-                    </div>
+                    <a href="mailto:kaliosstudio.dev@gmail.com" class="flex items-center gap-3 group mb-3">
+                        <div class="w-10 h-10 rounded-lg bg-surface border border-border-dim flex items-center justify-center group-hover:border-white transition-colors">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <span class="text-sm font-bold group-hover:text-secondary-text transition-colors">kaliosstudio.dev@gmail.com</span>
+                    </a>
+                    <p class="text-[10px] text-muted-text font-bold uppercase tracking-widest leading-relaxed">Direct response for partnership &amp; publishing.</p>
                 </div>
+
             </div>
-            <div class="border-t border-border-dim pt-12 reveal text-center">
+            <div class="border-t border-border-dim pt-8 md:pt-12 reveal text-center">
                 <p class="text-[10px] text-muted-text uppercase tracking-widest font-bold">© 2026 Kalios Studio. All rights reserved.</p>
             </div>
         </div>
@@ -254,50 +290,6 @@
         }, { threshold: 0.1 });
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-        /* Hero Starfield — scoped to hero canvas only */
-        (function() {
-            const canvas = document.getElementById('hero-stars');
-            const ctx = canvas.getContext('2d');
-            let stars = [];
-            const COUNT = 180;
-
-            function resize() {
-                canvas.width  = canvas.offsetWidth;
-                canvas.height = canvas.offsetHeight;
-                init();
-            }
-
-            function init() {
-                stars = [];
-                for (let i = 0; i < COUNT; i++) {
-                    stars.push({
-                        x:       Math.random() * canvas.width,
-                        y:       Math.random() * canvas.height,
-                        r:       Math.random() * 1.2 + 0.2,
-                        alpha:   Math.random(),
-                        dAlpha:  (Math.random() * 0.004 + 0.001) * (Math.random() < 0.5 ? 1 : -1),
-                    });
-                }
-            }
-
-            function draw() {
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-                stars.forEach(s => {
-                    s.alpha += s.dAlpha;
-                    if (s.alpha <= 0 || s.alpha >= 1) s.dAlpha *= -1;
-                    ctx.beginPath();
-                    ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-                    ctx.fillStyle = `rgba(255,255,255,${s.alpha.toFixed(3)})`;
-                    ctx.fill();
-                });
-                requestAnimationFrame(draw);
-            }
-
-            window.addEventListener('resize', resize);
-            resize();
-            draw();
-        })();
-
         /* Tab Switcher */
         function showTab(tab) {
             const games = document.getElementById('tab-games');
@@ -311,6 +303,7 @@
                 btnG.classList.remove('text-muted-text','border-transparent');
                 btnA.classList.add('text-muted-text','border-transparent');
                 btnA.classList.remove('text-white','border-white');
+                games.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
             } else {
                 apps.classList.remove('hidden');
                 games.classList.add('hidden');
@@ -318,6 +311,7 @@
                 btnA.classList.remove('text-muted-text','border-transparent');
                 btnG.classList.add('text-muted-text','border-transparent');
                 btnG.classList.remove('text-white','border-white');
+                apps.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
             }
         }
     </script>
